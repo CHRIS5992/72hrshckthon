@@ -1,0 +1,106 @@
+﻿BOOT OK - Improved Optimizer v2
+
+Data directory: C:\Users\chriz\OneDrive\Desktop\KAGGLE DATATHON\model\data
+[OK] All files found
+
+--- Loading Data ---
+[LOADED] config.json
+[LOADED] stp_registry (4 rows)
+[LOADED] farm_locations (250 rows)
+[LOADED] daily_weather (365 rows)
+[LOADED] daily_n_demand (365 rows)
+[LOADED] planting_schedule (264 rows)
+
+--- Precomputing ---
+[DONE] Computed 1000 distances
+[DONE] 49723 farm-days rain-locked
+[DONE] 55614 farm-days are active
+
+======================================================================
+IMPROVED OPTIMIZER v2: MAXIMUM THROUGHPUT STRATEGY
+======================================================================
+  Daily STP output: 75 tons
+  Total storage: 1400 tons
+  Annual production: 27,375 tons
+
+  Processing 365 days...
+    Day 50: Storage 420/1400, Overflow so far: 0
+    Day 100: Storage 420/1400, Overflow so far: 0
+    Day 150: Storage 570/1400, Overflow so far: 0
+    Day 200: Storage 420/1400, Overflow so far: 1010
+    Day 250: Storage 420/1400, Overflow so far: 1010
+    Day 300: Storage 570/1400, Overflow so far: 1010
+    Day 350: Storage 420/1400, Overflow so far: 1010
+
+======================================================================
+FINAL RESULTS
+======================================================================
+  Deliveries: 2,799
+  Biosolids delivered: 26,645.2 tons
+  Overflow: 1,009.9 tons
+  Effective N: 38,852 kg
+  Excess N: 627,278 kg
+  Total distance: 145,691 km
+
+  SCORE BREAKDOWN:
+    + N offset credit:            194,260 CO2
+    + Soil carbon:              5,329,040 CO2
+    - Transport:                  131,122 CO2
+    - Excess N penalty:         6,272,780 CO2
+    - Overflow penalty:         1,009,900 CO2
+python : Traceback (most 
+recent call last):
+At line:1 char:1
++ python main_v2.py 2>&1 | 
+Out-File -FilePath 
+output_log.txt -Encoding  ...
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Traceba  
+  ck (most recent call las   
+ t)::String) [], RemoteEx    
+ception
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+  File "C:\Users\chriz\OneDri
+ve\Desktop\KAGGLE 
+DATATHON\model\main_v2.py", 
+line 491, in <module>
+    run()
+    ~~~^^
+  File "C:\Users\chriz\OneDri
+ve\Desktop\KAGGLE 
+DATATHON\model\main_v2.py", 
+line 419, in run
+    solution_df = 
+generate_schedule_v2(data, 
+precomputed)
+  File "C:\Users\chriz\OneDri
+ve\Desktop\KAGGLE 
+DATATHON\model\main_v2.py", 
+line 391, in 
+generate_schedule_v2
+    print(f"    \u2500\u2500\
+u2500\u2500\u2500\u2500\u2500
+\u2500\u2500\u2500\u2500\u250
+0\u2500\u2500\u2500\u2500\u25
+00\u2500\u2500\u2500\u2500\u2
+500\u2500\u2500\u2500\u2500\u
+2500\u2500\u2500\u2500\u2500\
+u2500\u2500")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\enco
+dings\cp1252.py", line 19, 
+in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ~~~~~~~~~~~~~~~~~~
+~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+characters in position 4-36: 
+character maps to <undefined>

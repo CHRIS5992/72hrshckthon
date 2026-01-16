@@ -1,0 +1,6 @@
+pandas
+numpy
+# Optional / useful packages:
+# scikit-learn
+# xgboost
+# lightgbm
